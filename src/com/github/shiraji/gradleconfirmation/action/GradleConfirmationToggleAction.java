@@ -4,19 +4,15 @@ import com.github.shiraji.gradleconfirmation.config.GradleConfirmationConfig;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.ToggleAction;
 
-/**
- * Created by Shiraji on 15/07/09.
- */
 public class GradleConfirmationToggleAction extends ToggleAction {
+
     @Override
     public boolean isSelected(AnActionEvent anActionEvent) {
-        GradleConfirmationConfig config = GradleConfirmationConfig.getInstance(anActionEvent.getProject());
-        return config.isEnablePlugin();
+        return GradleConfirmationConfig.isSelected(anActionEvent.getProject());
     }
 
     @Override
     public void setSelected(AnActionEvent anActionEvent, boolean b) {
-        GradleConfirmationConfig config = GradleConfirmationConfig.getInstance(anActionEvent.getProject());
-        config.setDisablePlugin(b);
+        GradleConfirmationConfig.setSelected(anActionEvent.getProject(), b);
     }
 }

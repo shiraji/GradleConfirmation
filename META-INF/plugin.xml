@@ -28,8 +28,6 @@
     <depends>org.jetbrains.plugins.gradle</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <projectService serviceInterface="com.github.shiraji.com.github.shiraji.gradleconfirmation.config.GradleConfirmationConfig"
-                        serviceImplementation="com.github.shiraji.com.github.shiraji.gradleconfirmation.config.GradleConfirmationConfig"/>
     </extensions>
 
     <extensions defaultExtensionNs="org.jetbrains.plugins.gradle">

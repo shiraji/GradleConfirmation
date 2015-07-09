@@ -12,7 +12,7 @@ import com.intellij.openapi.project.Project;
 import org.jetbrains.plugins.gradle.service.task.GradleTaskManagerExtension;
 import org.jetbrains.plugins.gradle.settings.GradleExecutionSettings;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.util.List;
 
 public class GradleConfirmationTaskManager implements GradleTaskManagerExtension {
@@ -48,8 +48,7 @@ public class GradleConfirmationTaskManager implements GradleTaskManagerExtension
     }
 
     private boolean isEnablePlugin(Project project) {
-        GradleConfirmationConfig config = GradleConfirmationConfig.getInstance(project);
-        return config.isEnablePlugin();
+        return GradleConfirmationConfig.isSelected(project);
     }
 
     private void showCancelMessage(String taskListNames) {

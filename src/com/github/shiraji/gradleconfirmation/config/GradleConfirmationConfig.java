@@ -1,45 +1,17 @@
 package com.github.shiraji.gradleconfirmation.config;
 
-import com.intellij.openapi.components.*;
+import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.project.Project;
-import com.intellij.util.xmlb.XmlSerializerUtil;
-import org.jetbrains.annotations.Nullable;
 
-@State(
-        name = "GradleConfirmationConfig",
-        reloadable = true,
-        storages = {
-                @Storage(id = "default", file = "$PROJECT_FILE$"),
-                @Storage(id = "dir",
-                        file = "$PROJECT_CONFIG_DIR$/gradle_confirmation_plugin.xml",
-                        scheme = StorageScheme.DIRECTORY_BASED)
-        }
-)
-public class GradleConfirmationConfig implements PersistentStateComponent<GradleConfirmationConfig> {
+public class GradleConfirmationConfig {
 
-    private boolean mIsEnablePlugin = true;
+    public static final String IS_ENABLE_CONF_KEY = "com.github.shiraji.gradleconfirmation.isenable";
 
-    @Nullable
-    @Override
-    public GradleConfirmationConfig getState() {
-        return this;
+    public static boolean isSelected(Project project) {
+        return PropertiesComponent.getInstance(project).getBoolean(IS_ENABLE_CONF_KEY, true);
     }
 
-    @Override
-    public void loadState(GradleConfirmationConfig config) {
-        XmlSerializerUtil.copyBean(config, this);
-    }
-
-    @Nullable
-    public static GradleConfirmationConfig getInstance(Project project) {
-        return ServiceManager.getService(project, GradleConfirmationConfig.class);
-    }
-
-    public boolean isEnablePlugin() {
-        return mIsEnablePlugin;
-    }
-
-    public void setDisablePlugin(boolean isDisablePlugin) {
-        mIsEnablePlugin = isDisablePlugin;
+    public static void setSelected(Project project, boolean isEnable) {
+        PropertiesComponent.getInstance(project).setValue(IS_ENABLE_CONF_KEY, String.valueOf(isEnable));
     }
 }
