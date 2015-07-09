@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.github.shiraji.gradleconfirmation</id>
     <name>Gradle Confirmation</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">Shiraji</vendor>
 
     <description><![CDATA[
@@ -9,6 +9,11 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <p>0.0.2</p>
+        <ul>
+            <li>Changed how to store settings (PersistentStateComponent to PropertiesComponent)</li>
+        </ul>
+
         <p>0.0.1</p>
         <ul>
             <li>Initial release</li>
