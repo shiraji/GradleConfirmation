@@ -1,11 +1,13 @@
-<idea-plugin version="2">
+<idea-plugin version="2" url="https://plugins.jetbrains.com/plugin/7848">
     <id>com.github.shiraji.gradleconfirmation</id>
     <name>Gradle Confirmation</name>
     <version>0.0.2</version>
     <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">Shiraji</vendor>
 
     <description><![CDATA[
-        This plugin shows a confirmation dialog before executing gradle tasks.
+        This plugin shows a confirmation dialog before executing gradle tasks.<br/><br/>
+        <a href="https://github.com/shiraji/GradleConfirmation">GitHub</a> |
+        <a href="https://github.com/shiraji/GradleConfirmation/issues">Issues</a>
     ]]></description>
 
     <change-notes><![CDATA[
