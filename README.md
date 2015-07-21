@@ -31,7 +31,7 @@ To disable this plugin, go to `Tools > uncheck Show Gradle Confirmation`
 
 ## History
 
-
+See [CHANGELOG](https://github.com/shiraji/GradleConfirmation/blob/master/CHANGELOG.md)
 
 ## License
 
