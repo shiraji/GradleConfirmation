@@ -42,7 +42,7 @@ public class GradleConfirmationTaskManager implements GradleTaskManagerExtension
         if (optionDialog == JOptionPane.YES_OPTION) {
             return START_EXECUTE;
         } else {
-            showCancelMessage(taskListNames);
+            showCancelMessage(externalSystemTaskId, externalSystemTaskNotificationListener, taskListNames);
             return STOP_EXECUTE;
         }
     }
@@ -51,10 +51,11 @@ public class GradleConfirmationTaskManager implements GradleTaskManagerExtension
         return GradleConfirmationConfig.isSelected(project);
     }
 
-    private void showCancelMessage(String taskListNames) {
-        Notifications.Bus.notify(new Notification("GradleConfirmation",
-                "Gradle Confirmation", String.format("Stop running %s", taskListNames),
-                NotificationType.INFORMATION));
+    private void showCancelMessage(ExternalSystemTaskId externalSystemTaskId,
+                                   ExternalSystemTaskNotificationListener externalSystemTaskNotificationListener,
+                                   String taskListNames) {
+        externalSystemTaskNotificationListener.onTaskOutput(externalSystemTaskId,
+                String.format("Stop running %s\n", taskListNames), true);
     }
 
     private String createTaskListNames(List<String> taskNames) {
