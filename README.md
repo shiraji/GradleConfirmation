@@ -31,17 +31,7 @@ To disable this plugin, go to `Tools > uncheck Show Gradle Confirmation`
 
 ## History
 
-### ver 0.0.3
 
-Replaced showing the notification with printing the message to the console
-
-### ver 0.0.2
-
-Changed how to store settings (PersistentStateComponent to PropertiesComponent)
-
-### ver 0.0.1
-
-nitial release
 
 ## License
 
