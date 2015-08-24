@@ -1,6 +1,7 @@
 # Gradle Confirmation
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-GradleConfirmation-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2350)
+[![Software License](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](https://github.com/shiraji/GradleConfirmation/blob/master/LICENSE)
 
 This plugin shows a confirmation dialog before executing gradle tasks.
 
