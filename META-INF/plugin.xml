@@ -1,10 +1,8 @@
 <idea-plugin url="https://plugins.jetbrains.com/plugin/7848" version="2">
     <id>com.github.shiraji.gradleconfirmation</id>
     <name>Gradle Confirmation</name>
-    <version>0.0.3</version>
-    <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">
-        Shiraji
-    </vendor>
+    <version>1.0.0</version>
+    <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">Shiraji</vendor>
 
     <description><![CDATA[
         This plugin shows a confirmation dialog before executing gradle tasks.<br/><br/>
@@ -13,6 +11,11 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <p>1.0.0</p>
+        <ul>
+            <li>Add a function that disables each Gradle Tasks</li>
+        </ul>
+
         <p>0.0.3</p>
         <ul>
             <li>Replaced showing the notification with printing the message to the console</li>
