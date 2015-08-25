@@ -1,8 +1,10 @@
-<idea-plugin version="2" url="https://plugins.jetbrains.com/plugin/7848">
+<idea-plugin url="https://plugins.jetbrains.com/plugin/7848" version="2">
     <id>com.github.shiraji.gradleconfirmation</id>
     <name>Gradle Confirmation</name>
     <version>0.0.3</version>
-    <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">Shiraji</vendor>
+    <vendor email="isogai.shiraji@gmail.com" url="https://github.com/shiraji">
+        Shiraji
+    </vendor>
 
     <description><![CDATA[
         This plugin shows a confirmation dialog before executing gradle tasks.<br/><br/>
@@ -37,13 +39,14 @@
     <depends>com.intellij.modules.lang</depends>
     -->
 
-    <depends>org.jetbrains.plugins.gradle</depends>
-
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
 
+    <depends>org.jetbrains.plugins.gradle</depends>
+
     <extensions defaultExtensionNs="org.jetbrains.plugins.gradle">
-        <taskManager implementation="com.github.shiraji.gradleconfirmation.task.GradleConfirmationTaskManager"/>
+        <taskManager
+            implementation="com.github.shiraji.gradleconfirmation.task.GradleConfirmationTaskManager"/>
     </extensions>
 
     <application-components>
@@ -55,11 +58,20 @@
     </project-components>
 
     <actions>
-        <action id="GradleConfirmationToggleAction"
+        <group id="GradleConfirmationActionGroup" popup="true"
+               text="Gradle Confirmation">
+            <action
                 class="com.github.shiraji.gradleconfirmation.action.GradleConfirmationToggleAction"
+                id="GradleConfirmationToggleAction"
                 text="Show Gradle Confirmation">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-        </action>
+            </action>
+            <action
+                class="com.github.shiraji.gradleconfirmation.action.GradleConfirmationListDisableTaskNamesAction"
+                id="GradleConfirmationListDisableTaskNamesAction"
+                text="Edit Disable Tasks...">
+            </action>
+            <add-to-group anchor="last" group-id="ToolsMenu"/>
+        </group>
     </actions>
 
 </idea-plugin>
