@@ -13,7 +13,7 @@
     <change-notes><![CDATA[
         <p>1.0.0</p>
         <ul>
-            <li>Add a function that disables each Gradle Tasks</li>
+            <li>Added a function that disables to show the confirmation based on gradle task names</li>
         </ul>
 
         <p>0.0.3</p>
