@@ -1,9 +1,6 @@
 # Gradle Confirmation
 
-[![Join the chat at https://gitter.im/shiraji/GradleConfirmation](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/shiraji/GradleConfirmation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-GradleConfirmation-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2350)
-[![Software License](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](https://github.com/shiraji/GradleConfirmation/blob/master/LICENSE)
+[![Join the chat at https://gitter.im/shiraji/GradleConfirmation](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/shiraji/GradleConfirmation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-GradleConfirmation-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2350) [![Software License](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](https://github.com/shiraji/GradleConfirmation/blob/master/LICENSE)
 
 This plugin shows a confirmation dialog before executing gradle tasks.
 
