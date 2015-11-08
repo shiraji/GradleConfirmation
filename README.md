@@ -18,16 +18,6 @@ Run Gradle task[s] from Gradle projects window, this plugin popup confirmation d
 
 To disable this plugin, go to `Tools > uncheck Show Gradle Confirmation`
 
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Make sure you put gradle.jar to 'IntelliJ Plugin SDK'. `File > Project Structure... > SDKs > IntelliJ Plugin SDK > click + sign > Pick gradle.jar file from under IntelliJ IDEA's plugin directory`
-4. Commit your changes: `git commit -am 'Add some feature'`
-5. Push to the branch: `git push origin my-new-feature`
-6. Submit a pull request
-
-
 ## History
 
 See [CHANGELOG](https://github.com/shiraji/GradleConfirmation/blob/master/CHANGELOG.md)
