@@ -4,6 +4,10 @@
 
 This plugin shows a confirmation dialog before executing gradle tasks.
 
+## How to disable confirmation specific gradle task?
+
+In some projects, running tests, showing help, or building project may not affect anything.
+
 ## Installation
 
 Use the IDE's plugin manager to install the latest version of the plugin.
